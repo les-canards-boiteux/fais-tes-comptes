@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 
-class Operation {
+export class Operation {
     constructor({ amount, date = Date.now(), confirmed = false }){
         this.amount = amount;
         this.date = date;
@@ -12,4 +12,4 @@ class Operation {
     }
 }
 
-export { Operation };
+// export { Operation };

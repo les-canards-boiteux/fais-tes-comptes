@@ -1,0 +1,20 @@
+{
+    "accounts": [
+        {
+            "name": "Compte principal",
+            "balance": 865.63,
+            "history": [
+                {
+                    "amount": 1000,
+                    "date": 1557667690000,
+                    "confirmed": true
+                },
+                {
+                    "amount": -134.37,
+                    "date": 1557754090815,
+                    "confirmed": false
+                }
+            ]
+        }
+    ]
+}

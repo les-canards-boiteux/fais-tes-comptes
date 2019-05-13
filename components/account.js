@@ -1,13 +1,14 @@
 /*jshint esversion: 6 */
 
-import { uniqueId } from './utils/generator.js';
+import { uniqueId } from '../utils/generator';
+import { Operation } from '../components/operation';
 
-class Account {
-    constructor({ name = "New account", balance = 0 }) {
+export class Account {
+    constructor({ name = "New account", balance = 0, history = [] }) {
         this.name = name;
         this.id = uniqueId();
         this.balance = balance;
-        this.history = [];
+        this.history = history;
     }
 
     operation(amount) {
@@ -18,6 +19,18 @@ class Account {
     addHistory(amount) {
         this.history.push(new Operation(amount));
     }
+
+    getName(){
+        return name;
+    }
+
+    getBalance() {
+        return balance;
+    }
+
+    getHistory() {
+        return history;
+    }
 }
 
-export { Account };
+// export { Account };
