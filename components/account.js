@@ -1,9 +1,9 @@
 /*jshint esversion: 6 */
 
-import { uniqueId } from '../utils/generator';
-import { Operation } from '../components/operation';
+import { uniqueId } from '../utils/generator.js';
+import { Operation } from '../components/operation.js';
 
-export class Account {
+class Account {
     constructor({ name = "New account", balance = 0, history = [] }) {
         this.name = name;
         this.id = uniqueId();
@@ -12,12 +12,14 @@ export class Account {
     }
 
     operation(amount) {
+        console.log("Operation");
+        amount = parseFloat(amount);
         this.balance += amount;
         this.addHistory(amount);
     }
 
     addHistory(amount) {
-        this.history.push(new Operation(amount));
+        this.history.push(new Operation({"amount": amount}));
     }
 
     getName(){
@@ -33,4 +35,4 @@ export class Account {
     }
 }
 
-// export { Account };
+export { Account };

@@ -15,6 +15,27 @@
                     "confirmed": false
                 }
             ]
+        },
+        {
+            "name": "Livret A",
+            "balance": 2151.16,
+            "history": [
+                {
+                    "amount": 551.16,
+                    "date": 1557667690000,
+                    "confirmed": true
+                },
+                {
+                    "amount": -250,
+                    "date": 1557754090815,
+                    "confirmed": true
+                },
+                {
+                    "amount": 1850,
+                    "date": 1557408490000,
+                    "confirmed": true
+                }
+            ]
         }
     ]
 }
